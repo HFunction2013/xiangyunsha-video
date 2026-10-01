@@ -35,6 +35,11 @@ const VOICE_SEGMENTS = [
 export const XiangyunShaVideo: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: "#0d0805" }}>
+      {/* 背景音乐：全程循环播放，音量适中不盖过人声 */}
+      <Sequence from={0} durationInFrames={4680}>
+        <Audio src={staticFile("background.mp3")} volume={0.2} loop />
+      </Sequence>
+
       {/* 20段配音按精确帧排列，每段与对应字幕完全同帧 */}
       {VOICE_SEGMENTS.map((seg, i) => (
         <Sequence key={i} from={seg.start} durationInFrames={seg.dur}>
