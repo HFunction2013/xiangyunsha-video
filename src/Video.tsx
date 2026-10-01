@@ -36,7 +36,7 @@ export const XiangyunShaVideo: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: "#0d0805" }}>
       {/* 背景音乐：全程循环播放，音量为原来的90%（0.18），不盖过人声 */}
-      <Sequence from={0} durationInFrames={4768}>
+      <Sequence from={0} durationInFrames={4765}>
         <Audio src={staticFile("background.mp3")} volume={0.18} loop />
       </Sequence>
 
@@ -72,8 +72,8 @@ export const XiangyunShaVideo: React.FC = () => {
         <Heritage />
       </Sequence>
 
-      {/* 结尾 3958-4768 (27.0s) — 第二遍背景音乐前27秒，显示"谢谢观看" */}
-      <Sequence from={3958} durationInFrames={810}>
+      {/* 结尾 3958-4765 (26.9s) — 第二遍背景音乐前27秒，所有元素消失后显示"谢谢观看" */}
+      <Sequence from={3958} durationInFrames={807}>
         <Ending />
       </Sequence>
 
