@@ -46,7 +46,7 @@ export const Ending: React.FC = () => {
       </svg>
 
       {/* 口号展示：300-580帧，之后消失 */}
-      <Slogan startFrame={300} endFrame={580} size={56} />
+      <Slogan startFrame={320} endFrame={600} size={56} />
 
       {/* 底部非遗文字：200帧淡入，660帧后消失 */}
       <div style={{ position: "absolute", bottom: 100, left: "50%", transform: "translateX(-50%)", textAlign: "center", opacity: interpolate(lf, [200, 260], [0, 1], { extrapolateRight: "clamp" }) * decorFadeOut }}>
