@@ -20,7 +20,7 @@ export const Export: React.FC = () => {
       <ChapterTitle chapter="第三章" title="外销 · 海上丝绸之路" startFrame={10} endFrame={200} />
 
       {/* 时间标签 */}
-      <div style={{ position: "absolute", top: 200, left: 100, opacity: interpolate(lf, [30, 90], [0, 1], { extrapolateRight: "clamp" }) }}>
+      <div style={{ position: "absolute", top: 200, left: 100, opacity: interpolate(lf, [30, 90], [0, 1], { extrapolateRight: "clamp" }), zIndex: 20 }}>
         <div style={{ fontSize: 52, color: "#C9A96E", fontFamily: "Georgia, serif", fontWeight: 700, letterSpacing: 2 }}>1920s</div>
         <div style={{ fontSize: 22, color: "#8B7355", fontFamily: "STSong, serif", letterSpacing: 4, marginTop: 4 }}>顺德 · 鼎盛时期</div>
       </div>
@@ -36,7 +36,7 @@ export const Export: React.FC = () => {
       </div>
 
       {/* 鼎盛数据 - 中上部 */}
-      <div style={{ position: "absolute", top: 340, left: "50%", transform: "translateX(-50%)", display: "flex", gap: 40, opacity: interpolate(lf, [120, 180], [0, 1], { extrapolateRight: "clamp" }) }}>
+      <div style={{ position: "absolute", top: 340, left: "50%", transform: "translateX(-50%)", display: "flex", gap: 40, opacity: interpolate(lf, [120, 180], [0, 1], { extrapolateRight: "clamp" }), zIndex: 20 }}>
         {[{ num: "500+", label: "晒莨工场" }, { num: "10000+", label: "从业工人" }, { num: "4000m", label: "日产量" }].map((item, i) => (
           <div key={i} style={{ textAlign: "center", padding: "18px 32px", background: "rgba(201,169,110,0.08)", border: "1px solid rgba(201,169,110,0.3)", borderRadius: 8 }}>
             <div style={{ fontSize: 48, color: "#C9A96E", fontFamily: "Georgia, serif", fontWeight: 700 }}>{item.num}</div>
@@ -46,14 +46,14 @@ export const Export: React.FC = () => {
       </div>
 
       {/* 海外美誉 */}
-      <div style={{ position: "absolute", top: 560, left: "50%", transform: "translateX(-50%)", textAlign: "center", opacity: interpolate(lf, [330, 390], [0, 1], { extrapolateRight: "clamp" }) }}>
+      <div style={{ position: "absolute", top: 560, left: "50%", transform: "translateX(-50%)", textAlign: "center", opacity: interpolate(lf, [330, 390], [0, 1], { extrapolateRight: "clamp" }), zIndex: 20 }}>
         <div style={{ fontSize: 20, color: "#8B7355", fontFamily: "STSong, serif", letterSpacing: 6, marginBottom: 10 }}>南洋 · 欧美 誉为</div>
         <div style={{ fontSize: 52, color: "#E8D5A8", fontFamily: "STSong, serif", letterSpacing: 10, textShadow: "0 0 30px rgba(201,169,110,0.3)" }}>「黑色闪光珍珠」</div>
         <div style={{ fontSize: 16, color: "#5a7a9a", fontFamily: "Georgia, serif", marginTop: 10, letterSpacing: 4 }}>Black Shining Pearl</div>
       </div>
 
       {/* 价格数据 */}
-      <div style={{ position: "absolute", top: 760, left: "50%", transform: "translateX(-50%)", textAlign: "center", opacity: interpolate(lf, [530, 590], [0, 1], { extrapolateRight: "clamp" }) }}>
+      <div style={{ position: "absolute", top: 760, left: "50%", transform: "translateX(-50%)", textAlign: "center", opacity: interpolate(lf, [530, 590], [0, 1], { extrapolateRight: "clamp" }), zIndex: 20 }}>
         <div style={{ display: "inline-block", padding: "14px 40px", background: "rgba(201,169,110,0.1)", border: "1px solid rgba(201,169,110,0.4)", borderRadius: 8 }}>
           <span style={{ fontSize: 20, color: "#8B7355", fontFamily: "STSong, serif", letterSpacing: 3 }}>每匹值 </span>
           <span style={{ fontSize: 36, color: "#E8C872", fontFamily: "Georgia, serif", fontWeight: 700 }}>十二两白银</span>

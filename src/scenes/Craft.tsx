@@ -31,7 +31,7 @@ export const Craft: React.FC = () => {
       <ChapterTitle chapter="第二章" title="技艺 · 三蒸九煮十八晒" startFrame={10} endFrame={220} />
 
       {/* 核心数据 - 中上部 */}
-      <div style={{ position: "absolute", top: 200, left: "50%", transform: "translateX(-50%)", display: "flex", gap: 100, opacity: interpolate(lf, [30, 90], [0, 1], { extrapolateRight: "clamp" }) }}>
+      <div style={{ position: "absolute", top: 200, left: "50%", transform: "translateX(-50%)", display: "flex", gap: 100, opacity: interpolate(lf, [30, 90], [0, 1], { extrapolateRight: "clamp" }), zIndex: 20 }}>
         {[{ num: "14", label: "种工艺" }, { num: "36", label: "道工序" }, { num: "数十次", label: "反复浸染" }].map((item, i) => (
           <div key={i} style={{ textAlign: "center" }}>
             <div style={{ fontSize: 72, color: "#C9A96E", fontFamily: "Georgia, serif", fontWeight: 700, textShadow: "0 0 30px rgba(201,169,110,0.3)" }}>{item.num}</div>
@@ -41,7 +41,7 @@ export const Craft: React.FC = () => {
       </div>
 
       {/* 工艺流程网格 - 中部 */}
-      <div style={{ position: "absolute", top: 380, left: "50%", transform: "translateX(-50%)", display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 10, width: 1200, opacity: interpolate(lf, [260, 320], [0, 1], { extrapolateRight: "clamp" }) }}>
+      <div style={{ position: "absolute", top: 380, left: "50%", transform: "translateX(-50%)", display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 10, width: 1200, opacity: interpolate(lf, [260, 320], [0, 1], { extrapolateRight: "clamp" }), zIndex: 20 }}>
         {CRAFT_STEPS.map((step, i) => {
           const isActive = i <= activeStep;
           const isCurrent = i === activeStep;
@@ -55,12 +55,12 @@ export const Craft: React.FC = () => {
       </div>
 
       {/* 化学反应公式 - 中下部 */}
-      <div style={{ position: "absolute", top: 620, left: "50%", transform: "translateX(-50%)", padding: "14px 36px", background: "rgba(101,67,33,0.4)", border: "1px solid rgba(201,169,110,0.35)", borderRadius: 6, opacity: interpolate(lf, [530, 590], [0, 1], { extrapolateRight: "clamp" }) }}>
+      <div style={{ position: "absolute", top: 620, left: "50%", transform: "translateX(-50%)", padding: "14px 36px", background: "rgba(101,67,33,0.4)", border: "1px solid rgba(201,169,110,0.35)", borderRadius: 6, opacity: interpolate(lf, [530, 590], [0, 1], { extrapolateRight: "clamp" }), zIndex: 20 }}>
         <span style={{ fontSize: 24, color: "#E8D5A8", fontFamily: "STSong, serif", letterSpacing: 3 }}>单宁酸 + 氧化铁 → 鞣酸亚铁（乌黑发亮）</span>
       </div>
 
       {/* "看天吃饭"三要素 */}
-      <div style={{ position: "absolute", top: 740, left: "50%", transform: "translateX(-50%)", display: "flex", gap: 60, opacity: interpolate(lf, [800, 860], [0, 1], { extrapolateRight: "clamp" }) }}>
+      <div style={{ position: "absolute", top: 740, left: "50%", transform: "translateX(-50%)", display: "flex", gap: 60, opacity: interpolate(lf, [800, 860], [0, 1], { extrapolateRight: "clamp" }), zIndex: 20 }}>
         {[{ icon: "☀", text: "阳光" }, { icon: "🌡", text: "温度" }, { icon: "💧", text: "湿度" }].map((item, i) => (
           <div key={i} style={{ textAlign: "center", padding: "12px 28px", border: "1px solid rgba(201,169,110,0.3)", borderRadius: 8, background: "rgba(201,169,110,0.06)" }}>
             <div style={{ fontSize: 28, marginBottom: 4 }}>{item.icon}</div>
@@ -71,7 +71,7 @@ export const Craft: React.FC = () => {
       </div>
 
       {/* 耗时数据 */}
-      <div style={{ position: "absolute", top: 880, left: "50%", transform: "translateX(-50%)", textAlign: "center", opacity: interpolate(lf, [990, 1050], [0, 1], { extrapolateRight: "clamp" }) }}>
+      <div style={{ position: "absolute", top: 880, left: "50%", transform: "translateX(-50%)", textAlign: "center", opacity: interpolate(lf, [990, 1050], [0, 1], { extrapolateRight: "clamp" }), zIndex: 20 }}>
         <div style={{ fontSize: 18, color: "#8B7355", fontFamily: "STSong, serif", letterSpacing: 5, marginBottom: 8 }}>从白坯到成品</div>
         <div style={{ fontSize: 38, color: "#E8C872", fontFamily: "STSong, serif", letterSpacing: 6 }}>耗时数月乃至数年</div>
       </div>
