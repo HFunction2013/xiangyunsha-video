@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>寻迹莨纱，非遗永续 — 香云纱染整技艺</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "STSong", "SimSun", "Songti SC", serif;
+    background: #0d0a07;
+    color: #E8D5A8;
+    line-height: 1.8;
+  }
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(ellipse at center, #2a1f12 0%, #0d0a07 70%);
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(201,169,110,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(139,105,20,0.06) 0%, transparent 50%);
+  }
+  .hero-sub {
+    font-size: 18px;
+    color: #8B7355;
+    letter-spacing: 8px;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .hero-title {
+    font-size: 96px;
+    color: #F5EDE0;
+    letter-spacing: 24px;
+    font-weight: 700;
+    text-shadow: 0 0 60px rgba(201,169,110,0.3);
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .hero-slogan {
+    font-size: 36px;
+    color: #C9A96E;
+    letter-spacing: 16px;
+    margin-top: 32px;
+    position: relative;
+  }
+  .hero-divider {
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #C9A96E, transparent);
+    margin: 24px auto;
+    position: relative;
+  }
+  .hero-en {
+    font-size: 14px;
+    color: #5a4a35;
+    letter-spacing: 6px;
+    font-family: Georgia, serif;
+    position: relative;
+  }
+  .scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    font-size: 14px;
+    color: #5a4a35;
+    letter-spacing: 4px;
+    animation: bounce 2s infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+  }
+  .video-section {
+    padding: 80px 40px;
+    background: #15100a;
+  }
+  .video-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    border: 1px solid rgba(201,169,110,0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+  .video-container video {
+    width: 100%;
+    display: block;
+    background: #000;
+  }
+  .video-label {
+    max-width: 1280px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .video-label .line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, #C9A96E, transparent);
+  }
+  .video-label .line:last-child {
+    background: linear-gradient(90deg, transparent, #C9A96E);
+  }
+  .video-label span {
+    font-size: 24px;
+    color: #C9A96E;
+    letter-spacing: 8px;
+  }
+  .content-section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+  .section-title {
+    font-size: 36px;
+    color: #F5EDE0;
+    letter-spacing: 6px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #C9A96E;
+    display: inline-block;
+  }
+  .section-desc {
+    font-size: 18px;
+    color: #8B7355;
+    margin-bottom: 40px;
+    line-height: 2;
+  }
+  .chapter {
+    margin-bottom: 48px;
+    padding: 32px;
+    background: rgba(201,169,110,0.04);
+    border-left: 3px solid #C9A96E;
+    border-radius: 0 8px 8px 0;
+  }
+  .chapter-num {
+    font-size: 16px;
+    color: #8B6914;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+  }
+  .chapter-name {
+    font-size: 28px;
+    color: #E8D5A8;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+  }
+  .chapter-text {
+    font-size: 17px;
+    color: #A89880;
+    line-height: 2;
+  }
+  .chapter-text em {
+    color: #C9A96E;
+    font-style: normal;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin: 40px 0;
+  }
+  .stat-card {
+    text-align: center;
+    padding: 28px 16px;
+    background: rgba(201,169,110,0.06);
+    border: 1px solid rgba(201,169,110,0.2);
+    border-radius: 8px;
+  }
+  .stat-num {
+    font-size: 42px;
+    color: #C9A96E;
+    font-family: Georgia, serif;
+    font-weight: 700;
+  }
+  .stat-label {
+    font-size: 15px;
+    color: #8B7355;
+    margin-top: 8px;
+    letter-spacing: 2px;
+  }
+  .craft-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 24px 0;
+  }
+  .craft-step {
+    padding: 10px 20px;
+    background: rgba(201,169,110,0.08);
+    border: 1px solid rgba(201,169,110,0.25);
+    border-radius: 4px;
+    font-size: 16px;
+    color: #D4C090;
+    letter-spacing: 2px;
+  }
+  .footer {
+    text-align: center;
+    padding: 60px 40px;
+    background: #0d0a07;
+    border-top: 1px solid rgba(201,169,110,0.1);
+  }
+  .footer-slogan {
+    font-size: 32px;
+    color: #C9A96E;
+    letter-spacing: 12px;
+    margin-bottom: 16px;
+  }
+  .footer-info {
+    font-size: 14px;
+    color: #5a4a35;
+    letter-spacing: 3px;
+  }
+  .meta-bar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+  .meta-item {
+    text-align: center;
+  }
+  .meta-item .val {
+    font-size: 20px;
+    color: #C9A96E;
+    font-family: Georgia, serif;
+  }
+  .meta-item .lbl {
+    font-size: 13px;
+    color: #5a4a35;
+    margin-top: 4px;
+    letter-spacing: 2px;
+  }
+</style>
+</head>
+<body>
+
+<!-- 首屏 -->
+<section class="hero">
+  <div class="hero-sub">国家级非物质文化遗产 · 香云纱染整技艺</div>
+  <h1 class="hero-title">香云纱</h1>
+  <div class="hero-divider"></div>
+  <div class="hero-en">XIANGYUNSHA · THE SILK OF TIME</div>
+  <div class="hero-slogan">寻迹莨纱 · 非遗永续</div>
+  <div class="meta-bar">
+    <div class="meta-item"><div class="val">1920×1080</div><div class="lbl">分辨率</div></div>
+    <div class="meta-item"><div class="val">2'36"</div><div class="lbl">时长</div></div>
+    <div class="meta-item"><div class="val">中文</div><div class="lbl">配音字幕</div></div>
+    <div class="meta-item"><div class="val">Remotion</div><div class="lbl">渲染引擎</div></div>
+  </div>
+  <div class="scroll-hint">向下滚动 ↓</div>
+</section>
+
+<!-- 视频播放 -->
+<section class="video-section">
+  <div class="video-label">
+    <div class="line"></div>
+    <span>成品视频</span>
+    <div class="line"></div>
+  </div>
+  <div class="video-container">
+    <video controls poster="" preload="metadata">
+      <source src="xiangyunsha.mp4" type="video/mp4">
+      您的浏览器不支持视频播放，请下载 xiangyunsha.mp4 观看。
+    </video>
+  </div>
+</section>
+
+<!-- 创作说明 -->
+<section class="content-section">
+  <h2 class="section-title">创作立意</h2>
+  <p class="section-desc">
+    本视频不取宏大叙事，而是以<strong style="color:#C9A96E">一匹素白丝绸从坯料到成品的旅程</strong>为线索，
+    通过四个小切口——"草木与河泥的偶然相遇""匠人的手感与天时""海风吹拂的商船""T台上的古老面料"——层层展开，
+    让观众在近三分钟内触摸到这项四百年非遗技艺的温度。
+  </p>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-num">400+</div><div class="stat-label">年传承历史</div></div>
+    <div class="stat-card"><div class="stat-num">14</div><div class="stat-label">种工艺</div></div>
+    <div class="stat-card"><div class="stat-num">36</div><div class="stat-label">道工序</div></div>
+    <div class="stat-card"><div class="stat-num">2008</div><div class="stat-label">年入选国家级非遗</div></div>
+  </div>
+
+  <h2 class="section-title">视频脚本</h2>
+
+  <div class="chapter">
+    <div class="chapter-num">开篇 · 0:00–0:15</div>
+    <div class="chapter-name">晨雾中的晒场</div>
+    <div class="chapter-text">
+      珠江口的清晨，水汽未散。一匹素白的丝绸，正等待一场与草木、河泥和阳光的相遇。<br>
+      这，就是香云纱——岭南人用四百年时光织就的<em>「软黄金」</em>。
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="chapter-num">第一章 · 0:15–0:45</div>
+    <div class="chapter-name">起源：草木与河泥的相遇</div>
+    <div class="chapter-text">
+      故事始于宋代。珠三角的先民发现，山间野生的薯莨，榨出的汁液能染丝；而河涌底部富含铁质的淤泥，竟能让丝面泛起幽亮的光泽。<br>
+      一草一泥，一染一晒，偶然间成就了世间<em>唯一用纯植物与矿物染制的真丝织物</em>。<br>
+      明代永乐年间，它已循着海上丝绸之路，远销海外。
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="chapter-num">第二章 · 0:45–1:30</div>
+    <div class="chapter-name">技艺：三蒸九煮十八晒</div>
+    <div class="chapter-text">
+      「三蒸九煮十八晒」——十四种工艺，三十六道工序。<br>
+      <div class="craft-flow">
+        <span class="craft-step">榨莨</span>
+        <span class="craft-step">浸莨</span>
+        <span class="craft-step">晒莨</span>
+        <span class="craft-step">洒莨</span>
+        <span class="craft-step">封莨</span>
+        <span class="craft-step">煮绸</span>
+        <span class="craft-step">卷绸</span>
+        <span class="craft-step">过泥</span>
+        <span class="craft-step">洗涤</span>
+        <span class="craft-step">晒干</span>
+        <span class="craft-step">摊雾</span>
+        <span class="craft-step">拉幅</span>
+      </div>
+      薯莨汁中的<em>单宁酸</em>，与河泥中的<em>氧化铁</em>相遇，生成黑色的<em>鞣酸亚铁</em>，让绸面乌黑发亮。<br>
+      而这一切，必须看天吃饭——阳光、温度、湿度，差一分都不行。<br>
+      一匹布，从白坯到成品，要经历数十次反复浸染晾晒，耗时数月乃至数年。
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="chapter-num">第三章 · 1:30–2:05</div>
+    <div class="chapter-name">外销：海上丝绸之路</div>
+    <div class="chapter-text">
+      清末民初，香云纱迎来鼎盛。1920年代的顺德，<em>五百多家晒莨厂、上万名工人，日产香云纱四千多米</em>。<br>
+      它顺着季风漂洋过海，在南洋、欧美被称作<em>「黑色闪光珍珠」</em>。<br>
+      最贵时，一匹香云纱值十二两白银。北京、上海的上流社会以穿香云纱为荣。
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="chapter-num">第四章 · 2:05–2:40</div>
+    <div class="chapter-name">传承：古老面料的新生</div>
+    <div class="chapter-text">
+      然而机器轰鸣中，手工晒莨场一度凋零。<br>
+      2008年，香云纱染整技艺入选<em>国家级非物质文化遗产</em>。<br>
+      今天，梁子将它带上巴黎时装周，邢莉莉创立德玺见萩，新锐设计师用AI重构纹样，年轻人让香云纱走进日常。<br>
+      从顺德的晒场到国际T台，古老的面料正在被重新看见。
+    </div>
+  </div>
+
+  <div class="chapter" style="text-align:center; border-left:none; background: rgba(201,169,110,0.08);">
+    <div class="chapter-num">结尾 · 2:40–2:50</div>
+    <div class="chapter-text" style="font-size:22px; color:#C9A96E; letter-spacing:4px;">
+      四百年草木浸染，四百年丝路传香。<br>
+      <strong>寻迹莨纱，非遗永续。</strong>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer">
+  <div class="footer-slogan">寻迹莨纱 · 非遗永续</div>
+  <div class="footer-info">
+    国家级非物质文化遗产 · 香云纱染整技艺 &nbsp;|&nbsp; Intangible Cultural Heritage of China
+  </div>
+</footer>
+
+</body>
+</html>
