@@ -21,32 +21,32 @@ export const Origin: React.FC = () => {
       <ChapterTitle chapter="第一章" title="起源 · 草木与河泥的相遇" startFrame={10} endFrame={250} />
 
       {/* 时间线视觉文字 - 左侧中上部，不被前景图遮挡 */}
-      <div style={{ position: "absolute", top: 200, left: 100, opacity: interpolate(lf, [60, 120], [0, 1], { extrapolateRight: "clamp" }) }}>
+      <div style={{ position: "absolute", top: 200, left: 100, opacity: interpolate(lf, [60, 120], [0, 1], { extrapolateRight: "clamp" }), zIndex: 20 }}>
         <div style={{ fontSize: 56, color: "#C9A96E", fontFamily: "Georgia, serif", fontWeight: 700, letterSpacing: 2 }}>宋代</div>
         <div style={{ width: 2, height: 50, background: "linear-gradient(180deg, #C9A96E, transparent)", margin: "8px 0 8px 28px" }} />
         <div style={{ fontSize: 20, color: "#8B7355", fontFamily: "STSong, serif", letterSpacing: 3 }}>先民发现薯莨染丝之法</div>
       </div>
 
       {/* 名词解释卡片 - 薯莨 */}
-      <div style={{ position: "absolute", top: 420, left: 100, padding: "16px 28px", background: "rgba(101,67,33,0.4)", borderLeft: "3px solid #C9A96E", opacity: interpolate(lf, [150, 210], [0, 1], { extrapolateRight: "clamp" }) }}>
+      <div style={{ position: "absolute", top: 420, left: 100, padding: "16px 28px", background: "rgba(101,67,33,0.4)", borderLeft: "3px solid #C9A96E", opacity: interpolate(lf, [150, 210], [0, 1], { extrapolateRight: "clamp" }), zIndex: 20 }}>
         <div style={{ fontSize: 24, color: "#E8D5A8", fontFamily: "STSong, serif", letterSpacing: 3, marginBottom: 4 }}>薯莨</div>
         <div style={{ fontSize: 15, color: "#8B7355", fontFamily: "STSong, serif" }}>山间野生植物 · 汁液含单宁酸</div>
       </div>
 
       {/* 名词解释卡片 - 河泥 */}
-      <div style={{ position: "absolute", top: 560, left: 100, padding: "16px 28px", background: "rgba(60,80,100,0.35)", borderLeft: "3px solid #7BA7C9", opacity: interpolate(lf, [280, 340], [0, 1], { extrapolateRight: "clamp" }) }}>
+      <div style={{ position: "absolute", top: 560, left: 100, padding: "16px 28px", background: "rgba(60,80,100,0.35)", borderLeft: "3px solid #7BA7C9", opacity: interpolate(lf, [280, 340], [0, 1], { extrapolateRight: "clamp" }), zIndex: 20 }}>
         <div style={{ fontSize: 24, color: "#A8C8E0", fontFamily: "STSong, serif", letterSpacing: 3, marginBottom: 4 }}>河涌铁泥</div>
         <div style={{ fontSize: 15, color: "#7A9AB5", fontFamily: "STSong, serif" }}>河底淤泥 · 富含氧化铁</div>
       </div>
 
       {/* 核心结论 - 唯一纯植物矿物染 */}
-      <div style={{ position: "absolute", top: 350, left: "50%", transform: "translateX(-50%)", textAlign: "center", opacity: interpolate(lf, [500, 560], [0, 1], { extrapolateRight: "clamp" }) }}>
+      <div style={{ position: "absolute", top: 350, left: "50%", transform: "translateX(-50%)", textAlign: "center", opacity: interpolate(lf, [500, 560], [0, 1], { extrapolateRight: "clamp" }), zIndex: 20 }}>
         <div style={{ fontSize: 22, color: "#8B7355", fontFamily: "STSong, serif", letterSpacing: 6, marginBottom: 12 }}>世间唯一</div>
         <div style={{ fontSize: 42, color: "#E8C872", fontFamily: "STSong, serif", letterSpacing: 8, textShadow: "0 0 30px rgba(201,169,110,0.3)" }}>纯植物与矿物染制真丝</div>
       </div>
 
       {/* 海上丝路时间节点 */}
-      <div style={{ position: "absolute", top: 560, left: "50%", transform: "translateX(-50%)", textAlign: "center", opacity: interpolate(lf, [770, 830], [0, 1], { extrapolateRight: "clamp" }) }}>
+      <div style={{ position: "absolute", top: 560, left: "50%", transform: "translateX(-50%)", textAlign: "center", opacity: interpolate(lf, [770, 830], [0, 1], { extrapolateRight: "clamp" }), zIndex: 20 }}>
         <div style={{ fontSize: 18, color: "#8B7355", fontFamily: "STSong, serif", letterSpacing: 5, marginBottom: 8 }}>明永乐年间</div>
         <div style={{ fontSize: 32, color: "#E8D5A8", fontFamily: "STSong, serif", letterSpacing: 6 }}>循海上丝绸之路 · 远销海外</div>
       </div>

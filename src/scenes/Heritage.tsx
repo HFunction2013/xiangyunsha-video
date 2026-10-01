@@ -27,13 +27,13 @@ export const Heritage: React.FC = () => {
       <ChapterTitle chapter="第四章" title="传承 · 古老面料的新生" startFrame={10} endFrame={200} />
 
       {/* 凋零→重生 对比 */}
-      <div style={{ position: "absolute", top: 200, left: 100, opacity: interpolate(lf, [20, 80], [0, 1], { extrapolateRight: "clamp" }) }}>
+      <div style={{ position: "absolute", top: 200, left: 100, opacity: interpolate(lf, [20, 80], [0, 1], { extrapolateRight: "clamp" }), zIndex: 20 }}>
         <div style={{ fontSize: 20, color: "#6a5a4a", fontFamily: "STSong, serif", letterSpacing: 4, textDecoration: "line-through", marginBottom: 8 }}>机器轰鸣 · 手工凋零</div>
         <div style={{ fontSize: 16, color: "#4a3a2a", fontFamily: "STSong, serif", letterSpacing: 3 }}>一度消失的晒莨场</div>
       </div>
 
       {/* 2008非遗认证 - 中上部 */}
-      <div style={{ position: "absolute", top: 200, left: "50%", transform: "translateX(-50%)", textAlign: "center", opacity: interpolate(lf, [100, 160], [0, 1], { extrapolateRight: "clamp" }) }}>
+      <div style={{ position: "absolute", top: 200, left: "50%", transform: "translateX(-50%)", textAlign: "center", opacity: interpolate(lf, [100, 160], [0, 1], { extrapolateRight: "clamp" }), zIndex: 20 }}>
         <div style={{ display: "inline-block", padding: "18px 48px", background: "linear-gradient(135deg, rgba(201,169,110,0.2), rgba(201,169,110,0.05))", border: "2px solid #C9A96E", borderRadius: 8 }}>
           <div style={{ fontSize: 52, color: "#E8C872", fontFamily: "Georgia, serif", fontWeight: 700, letterSpacing: 3 }}>2008</div>
           <div style={{ fontSize: 22, color: "#E8D5A8", fontFamily: "STSong, serif", letterSpacing: 4, marginTop: 4 }}>国家级非物质文化遗产</div>
@@ -41,7 +41,7 @@ export const Heritage: React.FC = () => {
       </div>
 
       {/* 传承者卡片 - 中部 */}
-      <div style={{ position: "absolute", top: 420, left: "50%", transform: "translateX(-50%)", display: "flex", gap: 18, width: 1500, justifyContent: "center" }}>
+      <div style={{ position: "absolute", top: 420, left: "50%", transform: "translateX(-50%)", display: "flex", gap: 18, width: 1500, justifyContent: "center", zIndex: 20 }}>
         {designers.map((d, i) => {
           const o = interpolate(lf, [330 + i * 70, 380 + i * 70], [0, 1], { extrapolateRight: "clamp", extrapolateLeft: "clamp" });
           const y = interpolate(lf, [330 + i * 70, 380 + i * 70], [25, 0], { extrapolateRight: "clamp", extrapolateLeft: "clamp" });
@@ -57,7 +57,7 @@ export const Heritage: React.FC = () => {
       </div>
 
       {/* T台路径 - 下部 */}
-      <div style={{ position: "absolute", top: 720, left: "50%", transform: "translateX(-50%)", textAlign: "center", opacity: interpolate(lf, [660, 720], [0, 1], { extrapolateRight: "clamp" }) }}>
+      <div style={{ position: "absolute", top: 720, left: "50%", transform: "translateX(-50%)", textAlign: "center", opacity: interpolate(lf, [660, 720], [0, 1], { extrapolateRight: "clamp" }), zIndex: 20 }}>
         <div style={{ height: 3, width: 600, background: "linear-gradient(90deg, transparent, #C9A96E, transparent)", margin: "0 auto 14px" }} />
         <span style={{ fontSize: 24, color: "#E8D5A8", fontFamily: "STSong, serif", letterSpacing: 6 }}>顺德晒场 → 国际T台 → 日常衣橱</span>
       </div>
