@@ -45,8 +45,8 @@ export const Ending: React.FC = () => {
         <path d={`M 200 ${170 + silkWave * 0.3} Q 350 ${140 - silkWave * 0.5} 500 ${180 + silkWave * 0.2}`} stroke="rgba(201,169,110,0.35)" strokeWidth="3" fill="none" />
       </svg>
 
-      {/* 口号展示：字幕v20消失后出现，630-700帧（时长70帧>60帧，避免淡入淡出点重合） */}
-      <Slogan startFrame={630} endFrame={700} size={56} />
+      {/* 口号展示：与配音v20同步出现，532-600帧 */}
+      <Slogan startFrame={532} endFrame={600} size={56} />
 
       {/* 底部非遗文字：200帧淡入，660帧后消失 */}
       <div style={{ position: "absolute", bottom: 100, left: "50%", transform: "translateX(-50%)", textAlign: "center", opacity: interpolate(lf, [200, 260], [0, 1], { extrapolateRight: "clamp" }) * decorFadeOut }}>
